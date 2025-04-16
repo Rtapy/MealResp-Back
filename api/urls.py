@@ -1,10 +1,10 @@
 from django.urls import path
-from views import (
+from .views import (
     MealsListView,
     MealsDetailView,
 )
 
-urrpatterns = [
+urlpatterns = [
     path('meals/', MealsListView.as_view(), name='meals-list'),
     path('meals/<int:pk>/', MealsDetailView.as_view(), name='meals-detail'),
 ]
